@@ -1,45 +1,21 @@
 {
-  "settings": {
-    "logging": {
-      "url":            "http://dot.com",
-      "token":          "look-a-me-im-a-token",
-      "client-id":      "CLIENTID",
-      "client-secret":  "CLIENTSECRET",
-      "enabled": true
-    }
-  },
-  "buttons": [
-    {
-      "name": "myName",
-      "id": "da:sh:bu:tt:on:id",
-      "action": "gong",
-      "slack": {
-        "webhook": "https://hooks.slack.com/services/SERVIXEXXX/IDOFSLACKHOOKXXXYYYYZZZZ",
-        "channel": "#general",
-        "username": "Dash-button",
-        "message": "From amazon dash."
-      },
-      "giphy": {
-        "url": "http://api.giphy.com/v1/gifs/search",
-        "key": "GIPHYKEYXXX",
-        "searchTerms": ["amazon", "dash","button","node"]
-      }
-    },
-    {
-      "name": "Post to a url",
-      "id": "da:sh:bu:tt:on:id",
-      "action": "post",
-      "post": {
-        "url": "http://site.com/to/post/to",
-        "auth": {
-          "user": "username",
-          "pass": "password",
-          "sendImmediately": false
-        },
-        "headers": {
-          "User-Agent": "request"
+    "settings": {
+        "logging": {
+            "url": "http://dot.com",
+            "token": "look-a-me-im-a-token",
+            "client-id": "CLIENTID",
+            "client-secret": "CLIENTSECRET",
+            "enabled": true
         }
-      }
-    }
-  ]
+    },
+    "buttons": [{
+        "name": "Slack Button 1",
+        "id": "AMAZON-DASH-BUTTON-MAC",
+        "action": "post",
+        "post": {
+            "url": "SLACK-HOOK",
+            "headers": {"Content-type": "application/json"},
+            "json": {"text": "Тук-тук! Ближайшая дверь"}
+        }
+    }]
 }
