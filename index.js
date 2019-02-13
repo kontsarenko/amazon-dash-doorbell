@@ -13,7 +13,7 @@ config.buttons.forEach(function(button){
       doAction[button.action](button);
       presses[button.id] = true;
     };
-    setTimeout(function(){presses[button.id]=false},60000)
+    setTimeout(function(){presses[button.id]=false},1000)
   });
 });
 
